@@ -1,0 +1,72 @@
+# VoidVault Messages
+# Supports color codes using & (e.g., &a for green, &c for red)
+# Available placeholders are documented for each message
+
+# Message prefix used in all messages
+prefix: "&8[&5VoidVault&8]&r "
+
+# Command messages
+commands:
+  reload-success: "{prefix}&aConfiguration reloaded successfully!"
+  open-other: "{prefix}&aOpened vault for &d{player}&a."
+  open-other-page: "{prefix}&aOpened vault for &d{player}&a (Page &b{page}&a)."
+  setslots-success: "{prefix}&aSet slots for &d{player}&a to &b{amount}&a."
+  setpages-success: "{prefix}&aSet pages for &d{player}&a to &b{amount}&a."
+  no-permission: "{prefix}&cYou don't have permission to do that."
+  player-only: "{prefix}&cThis command can only be used by players."
+  player-not-found: "{prefix}&cPlayer &d{player}&c not found."
+  player-not-online: "{prefix}&cPlayer &d{player}&c is not online."
+  invalid-number: "{prefix}&cInvalid number: &b{input}&c"
+  invalid-page: "{prefix}&cInvalid page number: &b{page}&c"
+  usage-open: "{prefix}&7Usage: &f/voidvault open &d<player> &b[page]"
+  usage-setslots: "{prefix}&7Usage: &f/voidvault setslots &d<player> &b<amount>"
+  usage-setpages: "{prefix}&7Usage: &f/voidvault setpages &d<player> &b<amount>"
+  usage-main: "{prefix}&dVoidVault Commands:"
+
+# Remote access messages
+remote-access:
+  on-cooldown: "{prefix}&cYou must wait &b{seconds}s&c before using this again."
+  insufficient-funds: "{prefix}&cYou need &a{amount}&c to use this command."
+  fee-charged: "{prefix}&aCharged &b{amount}&a to open your vault."
+  fee-refunded: "{prefix}&aRefunded &b{amount}&a due to an error."
+  disabled: "{prefix}&cRemote access is currently disabled."
+
+# Vault operation messages
+vault:
+  opening: "{prefix}&aOpening your vault..."
+  page-changed: "{prefix}&aPage &b{page}&a of &b{max}&a."
+  sorted: "{prefix}&aVault sorted!"
+  deposited: "{prefix}&aDeposited &b{count}&a items."
+  no-items-to-deposit: "{prefix}&cNo matching items to deposit."
+  page-locked: "{prefix}&cYou don't have permission to access this page."
+  slot-locked: "{prefix}&cThis slot is locked. Upgrade your vault to unlock it!"
+  search-prompt: "{prefix}&bType the item name to search for (or 'cancel' to exit):"
+  search-active: "{prefix}&aFiltering items matching: &b{query}"
+  search-cancelled: "{prefix}&7Search cancelled."
+  search-cleared: "{prefix}&aSearch filter cleared."
+  no-matching-items: "{prefix}&cNo items found matching: &b{query}"
+
+# Error messages
+error:
+  load-failed: "{prefix}&cFailed to load your vault. Please contact an administrator."
+  save-failed: "{prefix}&cFailed to save your vault. Please try again."
+  generic: "{prefix}&cAn error occurred. Please contact an administrator."
+  invalid-mode: "{prefix}&cInvalid plugin mode in configuration."
+  database-error: "{prefix}&cDatabase connection error. Please contact an administrator."
+  data-corrupted: "{prefix}&cYour vault data appears to be corrupted. Using empty vault."
+  economy-transaction-failed: "{prefix}&cEconomy transaction failed. Please try again."
+
+# Admin messages
+admin:
+  data-saved: "{prefix}&aSaved data for &b{count}&a players."
+  migration-started: "{prefix}&aStarting data migration from &d{from}&a to &d{to}&a..."
+  migration-complete: "{prefix}&aMigration complete! Migrated &b{count}&a players."
+  migration-failed: "{prefix}&cMigration failed: {error}"
+  backup-created: "{prefix}&aBackup created: &b{file}&a"
+
+# GUI titles (used for inventory names)
+gui:
+  simple-vault: "&5Vault"
+  paged-vault: "&5Vault &8- &7Page {page}"
+  shulker-preview: "&5Shulker Box Preview"
+  admin-vault: "&5{player}'s Vault &8- &7Page {page}"

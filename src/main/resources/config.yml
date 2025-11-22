@@ -1,0 +1,149 @@
+# VoidVault Configuration
+# Plugin Mode: SIMPLE or PAGED
+# SIMPLE: Single-page vault with size-based permissions (9-54 slots)
+# PAGED: Feature-rich vault with multiple pages and utility functions
+plugin-mode: PAGED
+
+# Storage backend: YAML or MYSQL
+storage-type: YAML
+
+# MySQL settings (only used if storage-type is MYSQL)
+mysql:
+  host: localhost
+  port: 3306
+  database: voidvault
+  username: root
+  password: password
+  pool-size: 10
+
+# Remote access settings
+remote-access:
+  # Enable /echest, /pv, /vault commands
+  enabled: true
+  # Cooldown in seconds between remote access uses
+  cooldown-seconds: 60
+  # Economy fee charged per remote access (requires Vault)
+  economy-fee: 100.0
+
+# Auto-save interval (in minutes)
+# How often to save dirty player data to storage
+auto-save-interval: 5
+
+# Search/Filter settings
+search:
+  # Enable graying out non-matching items during search
+  grayout-enabled: true
+  # Search mode: 'name' (item name only) or 'all' (name + lore + display name)
+  search-mode: all
+  # Case sensitive search
+  case-sensitive: false
+
+# GUI Titles - Customize vault inventory titles
+# Supports color codes (&a, &b, etc.) and placeholders
+gui-titles:
+  # SIMPLE mode title
+  # Placeholders: {player}
+  simple: "&5&lVault"
+  
+  # PAGED mode title
+  # Placeholders: {player}, {page}, {maxPages}
+  paged: "&5&lVoidVault &8- &7Page {page}"
+  
+  # Admin viewing another player's vault
+  # Placeholders: {player}, {target}, {page}, {maxPages}
+  admin: "&5&l{target}'s Vault &8- &7Page {page}"
+
+# GUI Items - Customize the appearance of vault GUI elements
+items:
+  # Item shown in locked slots (PAGED mode)
+  locked-slot:
+    material: RED_STAINED_GLASS_PANE
+    display-name: "&c&lLocked"
+    lore:
+      - "&7Upgrade your vault to"
+      - "&7unlock this slot!"
+    glow: false
+  
+  # Filler item for control bar slots without permissions
+  filler-bar:
+    material: GRAY_STAINED_GLASS_PANE
+    display-name: " "
+    lore: []
+    glow: false
+  
+  # Previous page navigation button
+  previous-page:
+    material: ARROW
+    display-name: "&e&lPrevious Page"
+    lore:
+      - "&7Click to go back"
+    glow: false
+  
+  # Next page navigation button
+  next-page:
+    material: ARROW
+    display-name: "&e&lNext Page"
+    lore:
+      - "&7Click to continue"
+    glow: false
+  
+  # Sort button - organizes items in the current page
+  sort-button:
+    material: HOPPER
+    display-name: "&6&lSort Items"
+    lore:
+      - "&7Click to organize this page"
+      - "&7Groups and sorts items"
+    glow: false
+  
+  # Quick deposit button - deposits matching items from inventory
+  quick-deposit:
+    material: CHEST
+    display-name: "&a&lQuick Deposit"
+    lore:
+      - "&7Click to deposit items"
+      - "&7Stacks into existing items"
+    glow: false
+  
+  # Search/Filter button - filters items by name
+  search-button:
+    material: COMPASS
+    display-name: "&b&lSearch Items"
+    lore:
+      - "&7Click to filter items"
+      - "&7Type item name in chat"
+    glow: false
+  
+  # Filtered slot item - shown for non-matching items during search
+  filtered-slot:
+    material: LIGHT_GRAY_STAINED_GLASS_PANE
+    display-name: "&7&oFiltered"
+    lore:
+      - "&7This item doesn't match"
+      - "&7your search query"
+    glow: false
+
+# Default values when no permissions are set
+defaults:
+  # SIMPLE mode defaults
+  simple:
+    # Default number of slots (9, 18, 27, 36, 45, or 54)
+    slots: 27
+  
+  # PAGED mode defaults
+  paged:
+    # Default number of slots (9, 18, 27, 36, 45, or 50)
+    slots: 50
+    # Default number of pages (1-5, maximum is 5)
+    pages: 1
+
+# Feature toggles
+features:
+  # Enable sort button
+  sort-enabled: true
+  # Enable quick deposit button
+  quick-deposit-enabled: true
+  # Enable search/filter button
+  search-enabled: true
+  # Enable locked slot indicators
+  locked-slots-enabled: true
