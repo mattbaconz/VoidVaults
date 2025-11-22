@@ -1,9 +1,9 @@
 # VoidVault
 
-> Modern, performance-first Ender Chest replacement for Minecraft 1.17+
+> Modern, performance-first Ender Chest replacement for Minecraft 1.21+
 
 [![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/yourusername/voidvault)
-[![Minecraft](https://img.shields.io/badge/minecraft-1.17--1.21+-green.svg)](https://papermc.io)
+[![Minecraft](https://img.shields.io/badge/minecraft-1.21+-green.svg)](https://papermc.io)
 [![Java](https://img.shields.io/badge/java-21-orange.svg)](https://adoptium.net)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 
@@ -196,7 +196,7 @@ items:
 
 ## 📋 Requirements
 
-- **Minecraft**: 1.17 - 1.21+
+- **Minecraft**: 1.21+
 - **Server**: Paper, Purpur, Folia, or Spigot
 - **Java**: 21 or higher
 
