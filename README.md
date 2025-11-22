@@ -208,7 +208,8 @@ items:
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/voidvault/issues)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
-- **Discord**: [Join Server](https://discord.gg/yourserver)
+- **Discord**: [Join Server]((https://discord.com/invite/VQjTVKjs46))
+- **Paypal**: [Donate](https://www.paypal.com/paypalme/MatthewWatuna)
 - **Statistics**: [bStats](https://bstats.org/plugin/bukkit/VoidVaults/28100)
 
 ## 📜 License
@@ -224,3 +225,4 @@ MIT License - see [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ for the Minecraft community**
+
