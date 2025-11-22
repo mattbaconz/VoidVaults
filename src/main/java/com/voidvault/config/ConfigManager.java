@@ -171,11 +171,11 @@ public class ConfigManager {
             }
         } else {
             // PAGED mode defaults
-            defaultSlots = config.getInt("defaults.paged.slots", 52);
+            defaultSlots = config.getInt("defaults.paged.slots", 50);
             defaultPages = config.getInt("defaults.paged.pages", 1);
             
-            // Validate PAGED mode slots (9-52)
-            int[] validSlots = {9, 18, 27, 36, 45, 52};
+            // Validate PAGED mode slots (9-50)
+            int[] validSlots = {9, 18, 27, 36, 45, 50};
             boolean validSlotCount = false;
             for (int validSlot : validSlots) {
                 if (defaultSlots == validSlot) {
@@ -185,8 +185,8 @@ public class ConfigManager {
             }
             
             if (!validSlotCount) {
-                logger.warning("Invalid defaults.paged.slots value '" + defaultSlots + "'. Must be one of: 9, 18, 27, 36, 45, 52. Defaulting to 52.");
-                defaultSlots = 52;
+                logger.warning("Invalid defaults.paged.slots value '" + defaultSlots + "'. Must be one of: 9, 18, 27, 36, 45, 50. Defaulting to 50.");
+                defaultSlots = 50;
             }
             
             // Validate default-pages is between 1 and 5

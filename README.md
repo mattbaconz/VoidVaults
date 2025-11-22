@@ -209,6 +209,7 @@ items:
 - **Issues**: [GitHub Issues](https://github.com/yourusername/voidvault/issues)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 - **Discord**: [Join Server](https://discord.gg/yourserver)
+- **Statistics**: [bStats](https://bstats.org/plugin/bukkit/VoidVaults/28100)
 
 ## 📜 License
 
